@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jerico Gomez Duya's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc;
+        }
+        .section-title {
+            position: relative;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: #4c51bf;
+            border-radius: 9999px;
+        }
+        .project-card {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(76, 81, 191, 0.2), 0 4px 6px rgba(76, 81, 191, 0.1);
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+        }
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-gray-800">
+
+    <!-- Header & Hero Section -->
+    <header class="bg-white shadow-lg">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="text-2xl font-bold text-gray-800">Jerico Gomez Duya</div>
+            <div class="space-x-4 hidden md:block">
+                <a href="#projects" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Projects</a>
+                <a href="#about" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">About</a>
+                <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold text-gray-800 section-title mb-8">About Me</h2>
+                <div class="max-w-3xl mx-auto">
+                    <!-- Your profile picture is now here -->
+                    <img src="https://imgur.com/LDdDDVd.png" alt="Profile Picture" class="rounded-full w-48 h-48 mx-auto mb-8 object-cover">
+                    <p class="text-lg text-gray-600 leading-relaxed mb-4">
+                        Hello! I am a passionate graphic designer and creative professional. I specialize in a wide range of design work, including logo creation, branding, and promotional materials. My goal is to bring creative ideas to life with a unique and impactful visual style.
+                    </p>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        This portfolio is a showcase of my work, demonstrating my skills in different areas of design. Feel free to explore my projects and get in touch if you're interested in collaborating.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-gray-800 text-center section-title">My Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                    <!-- New Project: Tarpaulin Design -->
+                    <div class="project-card bg-gray-100 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                         <div class="flex flex-row space-x-2">
+                            <!-- Tarpaulin images are now here -->
+                            <img src="https://i.imgur.com/fZoXWJU.jpeg" alt="Tarpaulin Design 1" class="w-1/2 h-48 object-cover">
+                            <img src="https://i.imgur.com/MCKnTiK.jpeg" alt="Tarpaulin Design 2" class="w-1/2 h-48 object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2 text-gray-800">Tarpaulin Design</h3>
+                            <p class="text-gray-600 text-sm">An example of a tarpaulin I designed and edited for a special occasion.</p>
+                        </div>
+                    </div>
+
+                    <!-- New Project: Writing Pad Template -->
+                    <div class="project-card bg-gray-100 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                        <!-- Writing pad image is now here -->
+                        <img src="https://i.imgur.com/z9T2PJB.jpeg" alt="Writing Pad Template project" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2 text-gray-800">Writing Pad Template</h3>
+                            <p class="text-gray-600 text-sm">A custom-designed template for a writing pad, showcasing attention to detail and clean, functional design.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: T-Shirt Design -->
+                    <div class="project-card bg-gray-100 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="flex flex-row space-x-2">
+                             <!-- T-shirt images are now here -->
+                            <img src="https://i.imgur.com/7PVC02l.jpeg" alt="T-Shirt design project 1" class="w-1/2 h-48 object-cover">
+                            <img src="https://i.imgur.com/8aitkHz.jpeg" alt="T-Shirt design project 2" class="w-1/2 h-48 object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2 text-gray-800">T-Shirt Designs</h3>
+                            <p class="text-gray-600 text-sm">A collection of conceptual T-shirt designs, featuring intricate patterns and typography, created to reflect modern fashion trends and unique themes.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Logo -->
+                    <div class="project-card bg-gray-100 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                         <div class="flex flex-row space-x-2">
+                            <img src="https://i.imgur.com/nWkiNtO.jpeg" alt="Logo design project 1" class="w-1/3 h-48 object-cover">
+                            <img src="https://i.imgur.com/yIalUIV.jpeg" alt="Logo design project 2" class="w-1/3 h-48 object-cover">
+                            <img src="https://i.imgur.com/N3xMG7S.jpeg" alt="Logo design project 3" class="w-1/3 h-48 object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2 text-gray-800">Logo Designs</h3>
+                            <p class="text-gray-600 text-sm">A collection of logo and brand identity work, showcasing my versatility in creating impactful and unique visual identities.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Brand -->
+                    <div class="project-card bg-gray-100 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                        <!-- Brand Identity image is now here -->
+                        <img src="https://i.imgur.com/icVAetK.jpeg" alt="Brand identity project" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2 text-gray-800">Brand Identity</h3>
+                            <p class="text-gray-600 text-sm">A detailed brand identity project, including logo design and a cohesive color palette, created for a professional and modern look.</p>
+                        </div>
+                    </div>
+
+                     <!-- Project 5: Promotional Video -->
+                    <div class="project-card bg-gray-100 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                         <!-- For a video, you will use the <video> tag instead of <img>. Replace the URL below with a direct link to your video file. -->
+                        <img src="https://i.imgur.com/S1aZBYq.jpeg" alt="Promotional Graphic" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2 text-gray-800">Promotional Graphic</h3>
+                            <p class="text-gray-600 text-sm">A short, engaging promotional graphic for a 'Summer Lemon Tea' product, utilizing dynamic visuals and a fresh, summery color palette.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold text-gray-800 section-title mb-8">Get in Touch</h2>
+                <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+                    I'm excited to hear from you! Whether you have a project in mind or just want to say hello, feel free to reach out using the form below.
+                </p>
+                <div class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <input type="text" id="name" name="name" placeholder="Your Name" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors" required>
+                        </div>
+                        <div>
+                            <input type="email" id="email" name="email" placeholder="Your Email" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors" required>
+                        </div>
+                        <div>
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors" required></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full bg-indigo-600 text-white font-bold py-3 rounded-lg hover:bg-indigo-700 transition-colors duration-300">Send Message</button>
+                        </div>
+                    </form>
+                    <div id="form-message" class="mt-4 text-center text-sm text-gray-700"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('contact-form');
+            const formMessage = document.getElementById('form-message');
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                formMessage.textContent = 'Thank you for your message! I will get back to you shortly.';
+                formMessage.style.color = '#10B981'; // Tailwind's green-500
+                form.reset();
+            });
+        });
+    </script>
+</body>
+</html>
